@@ -16,8 +16,7 @@ Features :
 * The class TBSimpleItem :
 This class have been created to easily create a dynamic Chipmunk physics object with graphics features as the interface below describe.
 You can easily override this class to create your own custom items based on theses functionnalities.
-<pre><code>
-// TBSimpleItem.h
+<pre><code>// TBSimpleItem.h
 
 -(void) drawAt:(CGPoint)pos;
 	
@@ -34,8 +33,7 @@ You can easily override this class to create your own custom items based on thes
 -(void) setAnimationDelay:(float)delay;
 
 -(void) play;
--(void) stop;
-</code></pre>
+-(void) stop;</code></pre>
 
 Have fun !
 @Tbeltramelli <http://twitter.com/#!/tbeltramelli/>
