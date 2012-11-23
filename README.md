@@ -35,6 +35,19 @@ You can easily override this class to create your own custom items based on thes
 	
 	-(void) play;
 	-(void) stop;
+	
+	-(void) setPosition:(CGPoint)pos;
+	-(CGPoint) getPosition;
+	
+	-(void) setX:(CGFloat)xPos;
+	-(CGFloat) getX;
+	
+	-(void) setY:(CGFloat)yPos;
+	-(CGFloat) getY;
+	
+	-(CGSize) getSize;
+	-(CGFloat) getWidth;
+	-(CGFloat) getHeight;
 </code></pre>
 
 Have fun !
