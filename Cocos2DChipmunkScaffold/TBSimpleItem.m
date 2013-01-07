@@ -125,6 +125,11 @@
     [_sprite runAction:_baseAnimation];
 }
 
+-(void) setAnimation:(NSString *)atlasFormat with:(int)imageNumber
+{
+    [self setAnimation:atlasFormat with:imageNumber andDelay:0.05f];
+}
+
 -(void) setAnimationDelay:(float)delay
 {
     [self setAnimation:_atlasFormat with:_imageNumber andDelay:delay];

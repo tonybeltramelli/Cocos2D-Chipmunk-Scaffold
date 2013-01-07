@@ -26,17 +26,25 @@ static bool isPointInCircle(CGPoint point, CGPoint center, float radius) {
 @synthesize location = _location;
 @synthesize size = _size;
 @synthesize values = _values;
+@synthesize isCenterWithTouchEnd = _isCenterWithTouchEnd;
 
 - (id)init
+{
+    return [self initWithIsCenterWithTouchEnd:FALSE];
+}
+
+- (id)initWithIsCenterWithTouchEnd:(BOOL)isCenterWithTouchEnd
 {
     self = [super init];
     if (self)
     {
-        #ifdef __CC_PLATFORM_IOS
-            self.isTouchEnabled = YES;
-        #elif defined(__CC_PLATFORM_MAC)
-            self.isMouseEnabled = YES;
-        #endif
+#ifdef __CC_PLATFORM_IOS
+        self.isTouchEnabled = YES;
+#elif defined(__CC_PLATFORM_MAC)
+        self.isMouseEnabled = YES;
+#endif
+        
+        _isCenterWithTouchEnd = isCenterWithTouchEnd;
         
         _values = CGPointZero;
         
@@ -114,6 +122,8 @@ static bool isPointInCircle(CGPoint point, CGPoint center, float radius) {
 
 - (void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
 	_isPressed = false;
+    
+    if(_isCenterWithTouchEnd) [self updateVelocity:_center];
 }
 
 - (void)ccTouchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {

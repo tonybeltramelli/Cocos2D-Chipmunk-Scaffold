@@ -23,7 +23,9 @@
 @property (assign, nonatomic) CGPoint location;
 @property (assign, nonatomic) CGSize size;
 @property (assign, nonatomic) CGPoint values;
+@property (assign, nonatomic) BOOL isCenterWithTouchEnd;
 
+- (id)initWithIsCenterWithTouchEnd:(BOOL)isCenterWithTouchEnd;
 - (void)reset;
 
 @end
