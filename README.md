@@ -17,10 +17,10 @@ Features :
 This class have been created to easily create a dynamic Chipmunk physics object with graphics features as the interface below describe.
 You can easily override this class to create your own custom items based on theses functionnalities.
 
-<pre><code>
+```objc
 	// TBSimpleItem.h
 	-(void) drawAt:(CGPoint)pos;
-		
+
 	-(void) setPhysicProperties:(float)mass andFriction:(float)friction andElasticity:(float)elasticity;
 	
 	-(void) buildWithImage:(NSString *)name;
@@ -31,6 +31,7 @@ You can easily override this class to create your own custom items based on thes
 	-(void) buildWithImage:(NSString *)name at:(CGPoint)pos andAnimateWith:(NSString *)atlasFormat with:(int)imageNumber andDelay:(float)delay;
 	
 	-(void) setAnimation:(NSString *)atlasFormat with:(int)imageNumber andDelay:(float)delay;
+	-(void) setAnimation:(NSString *)atlasFormat with:(int)imageNumber;
 	-(void) setAnimationDelay:(float)delay;
 	
 	-(void) play;
@@ -48,7 +49,7 @@ You can easily override this class to create your own custom items based on thes
 	-(CGSize) getSize;
 	-(CGFloat) getWidth;
 	-(CGFloat) getHeight;
-</code></pre>
+```
 
 Have fun !
 @Tbeltramelli <http://twitter.com/#!/tbeltramelli/>
