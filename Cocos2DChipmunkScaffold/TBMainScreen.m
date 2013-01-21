@@ -44,7 +44,6 @@ static ccColor4F hexColorToRGBA(int hexValue, float alpha)
     UILabel *_labelJoystick;
 }
 
-
 -(void) addOrMoveHeroAtPosition:(CGPoint)pos;
 -(void) buildUI;
 -(void) initPhysics;
@@ -79,7 +78,7 @@ static ccColor4F hexColorToRGBA(int hexValue, float alpha)
         _model = [[TBModel alloc] init];
 		
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:[self isRetinaDisplay] ? @"sprite_sheet@2x.plist" : @"sprite_sheet.plist"];
-        CCSpriteBatchNode *spriteSheet = [CCSpriteBatchNode batchNodeWithFile:@"sprite_sheet.png" capacity:100];
+        CCSpriteBatchNode *spriteSheet = [CCSpriteBatchNode batchNodeWithFile:[self isRetinaDisplay] ? @"sprite_sheet@2x.png" : @"sprite_sheet.png" capacity:100];
         _spriteTexture = [spriteSheet texture];
 		[self addChild:spriteSheet z:0 tag:mainContainer];
         

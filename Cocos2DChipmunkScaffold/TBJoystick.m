@@ -38,11 +38,11 @@ static bool isPointInCircle(CGPoint point, CGPoint center, float radius) {
     self = [super init];
     if (self)
     {
-#ifdef __CC_PLATFORM_IOS
-        self.isTouchEnabled = YES;
-#elif defined(__CC_PLATFORM_MAC)
-        self.isMouseEnabled = YES;
-#endif
+        #ifdef __CC_PLATFORM_IOS
+            self.isTouchEnabled = YES;
+        #elif defined(__CC_PLATFORM_MAC)
+            self.isMouseEnabled = YES;
+        #endif
         
         _isCenterWithTouchEnd = isCenterWithTouchEnd;
         

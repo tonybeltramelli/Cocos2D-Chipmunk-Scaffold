@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 
 #import "cocos2d.h"
-#import "chipmunk.h"
 
 @interface TBJoystick : CCLayer
 {
@@ -26,6 +25,9 @@
 @property (assign, nonatomic) BOOL isCenterWithTouchEnd;
 
 - (id)initWithIsCenterWithTouchEnd:(BOOL)isCenterWithTouchEnd;
+- (void)reset;
+
+@end
 - (void)reset;
 
 @end
