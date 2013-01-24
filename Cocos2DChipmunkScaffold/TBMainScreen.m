@@ -350,7 +350,10 @@ static ccColor4F hexColorToRGBA(int hexValue, float alpha)
 - (void)dealloc
 {
     _hero = nil;
+    [_hero release];
+    
     _monsters = nil;
+    [_monsters release];
     
     cpSpaceFree(_space);
     
