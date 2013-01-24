@@ -91,7 +91,7 @@
 		cpv(_sprite.contentSize.width / 2, - _sprite.contentSize.height / 2),
 	};
     
-    _body= cpBodyNew(1.0f, cpMomentForPoly(1.0f, num, verts, CGPointZero));
+    _body = cpBodyNew(1.0f, cpMomentForPoly(1.0f, num, verts, CGPointZero));
 	cpBodySetPos(_body, pos);
     cpBodySetMass(_body, _mass);
     
@@ -109,10 +109,11 @@
     
     _delay = delay;
     
-    if(atlasFormat != _atlasFormat) _atlasFormat = [NSString stringWithString:atlasFormat];
+    _atlasFormat = atlasFormat;
     _imageNumber = imageNumber;
     
     NSMutableArray *animFrames = [[NSMutableArray alloc] init];
+    [animFrames autorelease];
     for (int i = 1; i <= imageNumber; i++) {
         NSString *file = [NSString stringWithFormat:atlasFormat, i];
         CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:file];
