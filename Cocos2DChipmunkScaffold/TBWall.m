@@ -26,14 +26,10 @@
     return self;
 }
 
--(void) clean
-{
-    cpShapeFree(_shape);
-}
-
 - (void)dealloc
 {
-    [self clean];
+    cpShapeFree(_shape);
+    
     [super dealloc];
 }
 

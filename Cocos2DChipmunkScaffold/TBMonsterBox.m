@@ -22,17 +22,18 @@
     return self;
 }
 
--(void) clean
-{
-    [_top clean];
-    [_bottom clean];
-    [_left clean];
-    [_right clean];
-}
-
 - (void)dealloc
 {
-    [self clean];
+    [_top release];
+    [_bottom release];
+    [_left release];
+    [_right release];
+    
+    _top = nil;
+    _bottom = nil;
+    _left = nil;
+    _right = nil;
+    
     [super dealloc];
 }
 

@@ -19,10 +19,7 @@
     NSString *intString = [NSString stringWithFormat:@"monster%d", n];
     
     NSString *image = [NSString stringWithFormat:@"%@%@",intString,@"_1.png"];
-    [image retain];
-    
     NSString *animation = [NSString stringWithFormat:@"%@%@",intString,@"_%d.png"];
-    [animation retain];
     
     float ratio = (0.25f * n);
     [super setPhysicProperties:(float)(1.0f + ratio) andFriction:(float)(1.2f + ratio)andElasticity:(float)(2.0f + ratio)];

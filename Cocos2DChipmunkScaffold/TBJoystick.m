@@ -8,8 +8,8 @@
 
 #import "TBJoystick.h"
 
-#define PAD_RADIUS 90.0f
-#define BTN_RADIUS 50.0f
+const float PAD_RADIUS = 90.0f;
+const float BTN_RADIUS = 50.0f;
 
 static CGPoint convertCoordinate(CGPoint point) {
 	return [[CCDirector sharedDirector] convertToUI:point];
@@ -132,10 +132,7 @@ static bool isPointInCircle(CGPoint point, CGPoint center, float radius) {
 
 - (void)dealloc
 {
-    [_pad release];
     _pad = nil;
-    
-    [_btn release];
     _btn = nil;
     
     [self removeFromParentAndCleanup:YES];

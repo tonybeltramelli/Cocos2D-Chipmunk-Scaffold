@@ -28,6 +28,3 @@
 - (void)reset;
 
 @end
-- (void)reset;
-
-@end

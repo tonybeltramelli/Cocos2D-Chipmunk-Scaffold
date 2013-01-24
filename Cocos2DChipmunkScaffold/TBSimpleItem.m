@@ -110,6 +110,7 @@
     _delay = delay;
     
     _atlasFormat = atlasFormat;
+    [_atlasFormat retain];
     _imageNumber = imageNumber;
     
     NSMutableArray *animFrames = [[NSMutableArray alloc] init];
@@ -198,6 +199,7 @@
     
     _sprite = nil;
     _baseAnimation = nil;
+    _atlasFormat = nil;
     
     cpShapeFree(_shape);
     _shape = nil;

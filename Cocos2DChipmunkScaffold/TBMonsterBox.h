@@ -21,6 +21,5 @@
 }
 
 -(id) initInSpace:(cpSpace *)space;
--(void) clean;
 
 @end

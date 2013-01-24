@@ -55,7 +55,7 @@ void removeShape( cpBody *body, cpShape *shape, void *data )
 -(void) dealloc
 {
 	cpBodyEachShape(_body, removeShape, NULL);
-	cpBodyFree( _body );
+	cpBodyFree(_body);
 	
 	[super dealloc];
 }

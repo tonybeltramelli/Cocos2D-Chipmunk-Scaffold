@@ -17,6 +17,5 @@
 
 -(id) initInSpace:(cpSpace *)space at:(CGPoint)position withWidth:(float)width andHeight:(float)height;
 -(id) initInSpace:(cpSpace *)space at:(CGPoint)position withSize:(CGPoint)size;
--(void) clean;
 
 @end

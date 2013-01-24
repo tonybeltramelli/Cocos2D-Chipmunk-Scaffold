@@ -349,10 +349,12 @@ static ccColor4F hexColorToRGBA(int hexValue, float alpha)
 
 - (void)dealloc
 {
-	cpSpaceFree(_space);
+    _hero = nil;
+    _monsters = nil;
     
-    [_monsterBox clean];
+    cpSpaceFree(_space);
     
+    [_monsterBox release];
     _monsterBox = nil;
     
     [_restartButton removeFromSuperview];
@@ -363,15 +365,20 @@ static ccColor4F hexColorToRGBA(int hexValue, float alpha)
     
     _restartButton = nil;
     _switchAnimationsButton = nil;
+    
+    [_slider release];
     _slider = nil;
+    
+    [_labelSlider release];
     _labelSlider = nil;
+    
+    [_labelJoystick release];
     _labelJoystick = nil;
     
-    
+    [_joystick release];
     _joystick = nil;
     
-    _hero = nil;
-    _monsters = nil;
+    [_model release];
     _model = nil;
     
     [super dealloc];
